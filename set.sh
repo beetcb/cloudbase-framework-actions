@@ -6,5 +6,8 @@ set -v
 # Download and install cloudbase cli
 sudo npm i -g @cloudbase/cli --loglevel=error
 
-tcb login --apiKeyId ${{ inputs.secretId }} --apiKey ${{ inputs.secretKey }}
-tcb framework deploy -e ${{ inputs.envId }}
+# Login in
+tcb login --apiKeyId "$1" --apiKey "$2"
+
+# Deploy to cloudbase
+tcb framework deploy -e "$3"

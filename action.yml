@@ -16,17 +16,6 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    # Download and install cloudbase cli
     - name: Set up cloudbase cli
-      run: sudo bash ${{ github.action_path }}/set.sh
+      run: sudo bash ${{ github.action_path }}/set.sh ${{ inputs.secretId }} ${{ inputs.secretKey }} ${{ inputs.envId }}
       shell: bash
-
-    # # Using cloudbase cli to log in
-    # - name: Log in
-    #   run: tcb login --apiKeyId ${{ inputs.secretId }} --apiKey ${{ inputs.secretKey }}
-    #   shell: bash
-
-    # # Using cloudbase cli to deploy a framework
-    # - name: Deploy framework
-    #   run: tcb framework deploy -e ${{ inputs.envId }}
-    #   shell: bash
