@@ -2,6 +2,7 @@
 
 # Trace commands
 set -x
+npm i -g chalk-cli
 
 chalk red bold "####### Download and install cloudbase cli ######"
 sudo npm i -g @cloudbase/cli --loglevel=error
