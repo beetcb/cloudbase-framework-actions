@@ -1,0 +1,32 @@
+name: 'cloudbase-framework-actions'
+author: 'i@beetcb.com'
+description: 'zero configuration deployment for cloudbase'
+
+inputs:
+  secretId:
+    description: 'secretId to access Tencent API'
+    required: true
+  secretKey:
+    description: 'secretKey to access Tencent API'
+    required: true
+  envId:
+    description: 'envId to find cloudbase environment'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    # Download and install cloudbase cli
+    - name: Set up cloudbase cli
+      run: sudo bash ${{ github.action_path }}/set.sh
+      shell: bash
+
+    # # Using cloudbase cli to log in
+    # - name: Log in
+    #   run: tcb login --apiKeyId ${{ inputs.secretId }} --apiKey ${{ inputs.secretKey }}
+    #   shell: bash
+
+    # # Using cloudbase cli to deploy a framework
+    # - name: Deploy framework
+    #   run: tcb framework deploy -e ${{ inputs.envId }}
+    #   shell: bash

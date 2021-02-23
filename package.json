@@ -1,0 +1,24 @@
+{
+  "name": "cloudbase-framework-actions",
+  "version": "0.0.0",
+  "description": "zero configuration deployment actions for cloudbase",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel build index.js --target node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beetcb/cloudbase-framework-actions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beetcb/cloudbase-framework-actions/issues"
+  },
+  "homepage": "https://github.com/beetcb/cloudbase-framework-actions#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/exec": "^1.0.4"
+  }
+}
