@@ -2,13 +2,12 @@
 
 # Trace commands
 set -x
-npm i -g chalk-cli
 
-chalk red bold "####### Download and install cloudbase cli ######"
+tput setaf 2; echo "####### Download and install cloudbase cli ######"
 sudo npm i -g @cloudbase/cli --loglevel=error
 
-chalk red bold "####### Login in ################################"
+tput setaf 2; echo "####### Login in ################################"
 tcb login --apiKeyId "$1" --apiKey "$2"
 
-chalk red bold "####### Deploy to cloudbase #####################"
+tput setaf 2; echo "####### Deploy to cloudbase #####################"
 tcb framework deploy -e "$3"
