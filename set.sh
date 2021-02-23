@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
 # Trace commands
-set -v
+set -x
 
-####### Download and install cloudbase cli ######
+chalk red bold "####### Download and install cloudbase cli ######"
 sudo npm i -g @cloudbase/cli --loglevel=error
 
-####### Login in ################################
+chalk red bold "####### Login in ################################"
 tcb login --apiKeyId "$1" --apiKey "$2"
 
-####### Deploy to cloudbase #####################
+chalk red bold "####### Deploy to cloudbase #####################"
 tcb framework deploy -e "$3"
