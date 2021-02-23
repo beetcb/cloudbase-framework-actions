@@ -16,6 +16,5 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - name: Set up cloudbase cli
-      run: sudo bash ${{ github.action_path }}/set.sh ${{ inputs.secretId }} ${{ inputs.secretKey }} ${{ inputs.envId }}
+    - run: sudo bash ${{ github.action_path }}/set.sh ${{ inputs.secretId }} ${{ inputs.secretKey }} ${{ inputs.envId }}
       shell: bash

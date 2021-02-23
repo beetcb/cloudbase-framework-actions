@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Trace commands
-set -x
+set -v
 
 ####### Download and install cloudbase cli ######
 sudo npm i -g @cloudbase/cli --loglevel=error
