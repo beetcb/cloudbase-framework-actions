@@ -3,11 +3,11 @@
 # Trace commands
 set -x
 
-tput setaf 2; echo "####### Download and install cloudbase cli ######"
+echo -e "\e[36m####### Download and install cloudbase cli ######"
 sudo npm i -g @cloudbase/cli --loglevel=error
 
-tput setaf 2; echo "####### Login in ################################"
+echo -e "\e[36m####### Login in ################################"
 tcb login --apiKeyId "$1" --apiKey "$2"
 
-tput setaf 2; echo "####### Deploy to cloudbase #####################"
+echo -e "\e[34m####### Deploy to cloudbase #####################"
 tcb framework deploy -e "$3"
