@@ -1,13 +1,21 @@
 #!/usr/bin/env bash
 
+ID="$1"
+KEY="$2"
+ENV="$3"
+
 # Trace commands
-set -x
+trace() {
+    set -x
+    eval $1
+    set +x
+}
 
 echo -e "\e[36m####### Download and install cloudbase cli ######"
-sudo npm i -g @cloudbase/cli --loglevel=error
+trace "sudo npm i -g @cloudbase/cli --loglevel=error"
 
 echo -e "\e[36m####### Login in ################################"
-tcb login --apiKeyId "$1" --apiKey "$2"
+trace "tcb login --apiKeyId "ID" --apiKey "KEY""
 
 echo -e "\e[34m####### Deploy to cloudbase #####################"
-tcb framework deploy -e "$3"
+trace "tcb framework deploy -e "ENV""
