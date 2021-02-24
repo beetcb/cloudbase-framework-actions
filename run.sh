@@ -11,7 +11,7 @@ trace() {
 }
 
 echo -e "\e[36m####### Download and install cloudbase cli ######"
-trace "sudo npm i -g @cloudbase/cli --loglevel=error | grep "@""
+trace "sudo npm i -g @cloudbase/cli --loglevel=error | grep "@cloudbase/cli""
 
 echo -e "\e[36m####### Login in ################################"
 trace "tcb login --apiKeyId "$ID" --apiKey "$KEY" | grep "登录""
