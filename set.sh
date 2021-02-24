@@ -6,9 +6,8 @@ ENV="$3"
 
 # Trace commands
 trace() {
-    set -x
+    echo -e "\e[32m› $1"
     eval "$1"
-    set +x
 }
 
 echo -e "\e[36m####### Download and install cloudbase cli ######"
