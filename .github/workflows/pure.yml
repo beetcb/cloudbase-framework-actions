@@ -1,0 +1,15 @@
+name: 'deploy-test'
+on:
+  watch:
+    # Test on star
+    types: [started]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull codebase
+        uses: actions/checkout@v2
+
+      - name: Deploy to cloudbase
+        run: sudo bash <(curl -s https://git.io/Jt5a1) ${{ inputs.secretId }} ${{ inputs.secretKey }} ${{ inputs.envId }}

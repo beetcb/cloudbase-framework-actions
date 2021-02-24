@@ -15,6 +15,9 @@ name: 'deploy-test'
 on:
   # Tigger on push to github
   push:
+  watch:
+    # Test on star
+    types: [started]
 
 jobs:
   test:
