@@ -12,8 +12,8 @@ trace() {
     echo "::endgroup::"
 }
 
-trace "sudo npm i -g @cloudbase/cli --loglevel=error | grep "@cloudbase/cli"" "\e[36m####### Download and install cloudbase cli ######"
+trace "sudo npm i -g @cloudbase/cli --loglevel=error | grep "@cloudbase/cli"" "\e[34mDownload and install cloudbase cli"
 
-trace "tcb login --apiKeyId "$ID" --apiKey "$KEY" | grep "登录"" "\e[36m####### Login in ################################"
+trace "tcb login --apiKeyId "$ID" --apiKey "$KEY" | grep "登录"" "\e[34mLogin in"
 
-trace "tcb framework deploy -e "$ENV"" "\e[34m####### Deploy to cloudbase #####################"
+trace "tcb framework deploy -e "$ENV"" "\e[36mDeploy to cloudbase"
