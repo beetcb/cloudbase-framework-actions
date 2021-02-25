@@ -1,3 +1,5 @@
+### This idea has been integrated into awesome [cloudbase-action](https://github.com/TencentCloudBase/cloudbase-action) project, using it instead
+
 A tiny [**github action**](https://docs.github.com/en/actions/creating-actions/creating-a-composite-run-steps-action) which can help you deploy your app to [tencent-cloudbase](https://www.cloudbase.net/) using the awesome [cloudbase-framework](https://github.com/Tencent/cloudbase-framework)
 
 Actions secrets needed:
